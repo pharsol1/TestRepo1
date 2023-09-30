@@ -24,3 +24,4 @@ C:\Parimal\Projects\TestRepo1\obj\Debug\net6.0\refint\TestRepo1.dll
 C:\Parimal\Projects\TestRepo1\obj\Debug\net6.0\TestRepo1.pdb
 C:\Parimal\Projects\TestRepo1\obj\Debug\net6.0\TestRepo1.genruntimeconfig.cache
 C:\Parimal\Projects\TestRepo1\obj\Debug\net6.0\ref\TestRepo1.dll
+C:\Parimal\Projects\TestRepo1\bin\Debug\net6.0\Dockerrun.aws.json
