@@ -1,18 +1,13 @@
 {
-  "AWSEBDockerrunVersion": "1",
-  "containerDefinitions": [
-      {
-          "essential": true,
-          "image": "testrepo1",
-          "name": "testrepo1",
-          "portMappings": [
-              {
-                  "containerPort": 5000,
-                  "hostPort": 5000
-              }
-          ]
-      }
-  ],
-  "family": "",
-  "volumes": []
+    "AWSEBDockerrunVersion": "1",
+    "Image":
+        {
+            "Name": "public.ecr.aws/o8n8s6m2/devopshint:latest"
+        },
+    "Ports":[
+                {
+                    "containerPort": 5000,
+                    "hostPort": 5000
+                }
+            ]
 }
