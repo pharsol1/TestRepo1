@@ -8,12 +8,12 @@ environment_name="Webride-env-1"
 
 EB_BUCKET=webride-bucket-27092023
 
-VERSION="Sample"
-#ZIP="code.$VERSION.zip"
-ZIP="$VERSION.zip"
+VERSION="v1"
+ZIP="code.$VERSION.zip"
+#ZIP="$VERSION.zip"
 
 aws configure set default.region eu-north-1
-
+ 
 # Zip up the Dockerrun file
 zip -r $ZIP Dockerrun.aws.json
 
