@@ -14,14 +14,14 @@ FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 ARG configuration=Release
 WORKDIR /src
 COPY ["TestRepo1.csproj", "./"]
-RUN dotnet restore "TestRepo1.csproj"
+RUN dotnet restore "TestRepo1.csproj" /p:IsDockerBuild=true
 COPY . .
 WORKDIR "/src/."
 RUN dotnet build "TestRepo1.csproj" -c $configuration -o /app/build
 
 FROM build AS publish
 ARG configuration=Release
-RUN dotnet publish "TestRepo1.csproj" -c $configuration -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "TestRepo1.csproj" -c $configuration -o /app/publish /p:UseAppHost=false /p:IsDockerBuild=true
 
 FROM base AS final
 WORKDIR /app
